@@ -8,7 +8,7 @@ const Input = () => {
             <div className='form-inner-div-slider'>
             <p><span>Value: <output id="value"></output></span></p>
                 
-                <input type="range" min="0" max="100" /> </div>
+            <input type="range" min="0" max="100" /> </div>
 
               <div className='form-inner-div'><input type="radio" name="choice" value="option1"/> <label> Spread Operator </label></div> 
               
