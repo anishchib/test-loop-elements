@@ -57,7 +57,7 @@
   width: 80%;
   gap:0.5rem;
 }
-.sub{
+.input{
 margin-top: .75rem;
   background-color: aquamarine;
   border: solid 0.1rem blue;
@@ -65,10 +65,21 @@ margin-top: .75rem;
 
 }
 
-.sub form{
+.output{
+  margin: .75rem;
+  background-color: aquamarine;
+  border: solid 0.1rem blue;
+  border-radius: 0.75rem;
+
+}
+
+
+.input form{
    display:flex;
   /*  */
    gap:0.5rem;
+   margin-top: 0.5rem;
+   padding: 0.5rem;
 }
 
 .form-inner-div{
@@ -84,19 +95,13 @@ button{
   margin-right: 0.25rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 1.25rem;
+  /* display: inline-block; */
+  font-size: 1.5rem;
   cursor: pointer; /* Changes cursor to pointer on hover */
-  border-radius: 2rem;
+  border-radius: 1rem;
 
-}
-select {
-  width: 10rem;
-  padding: 0.25rem;
-  font-size: 1rem;
-  border: 0.1 solid #ccc;
-  border-radius: 5rem; /* Some styling is possible */
-  color: #333;
+ 
+
 }
 
 /* Range Slider Input */
@@ -104,6 +109,6 @@ select {
 .form-inner-div-slider{
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
 
+ margin-top: 0.25rem;
   }

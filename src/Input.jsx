@@ -1,14 +1,20 @@
 import React from 'react'
 
-const Input = () => {
+const Input = ({range, onHandleSetRange}) => {
+
+    const setRangeVal = (e)=>
+    {
+    onHandleSetRange(Number(e.target.value));
+        console.log(e.target.value);
+    }
   return (
-    <div className='sub'>
+    <div className='input'>
           <form>
             
             <div className='form-inner-div-slider'>
-            <p><span>Value: <output id="value"></output></span></p>
+            <p><span>Value: <output id="value">{range}</output></span></p>
                 
-            <input type="range" min="0" max="100" /> </div>
+            <input type="range" min="0" max="100" value = {range} onChange={setRangeVal}/> </div>
 
               <div className='form-inner-div'><input type="radio" name="choice" value="option1"/> <label> Spread Operator </label></div> 
               

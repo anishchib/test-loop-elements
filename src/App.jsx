@@ -8,11 +8,15 @@ import Output from './Output'
 function App() {
   const [count, setCount] = useState(0)
   const [displayOutput,setDisplayOutput]=useState(true);
-
+  const[range,setRange] = useState(10);
+  const handleSetRange = (val)=>
+  {
+    setRange(val)
+  }
   return (
     <>
       <div className='container'>
-        <Input />
+        <Input range  = {range} onHandleSetRange = {handleSetRange}/>
        {displayOutput && <Output />} 
 
 
