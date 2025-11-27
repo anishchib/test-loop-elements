@@ -41,13 +41,12 @@
   color: #888;
 } */
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.container{
-  
+.container {
   display: flex;
 
   flex-direction: column;
@@ -55,40 +54,58 @@
   align-items: center;
   justify-content: center;
   width: 80%;
-  gap:0.5rem;
+  gap: 0.5rem;
 }
-.input{
-margin-top: .75rem;
+.input {
+  margin-top: 0.75rem;
   background-color: aquamarine;
   border: solid 0.1rem blue;
   border-radius: 0.75rem;
-
 }
 
-.output{
-  margin: .75rem;
+.output-container {
+  display: flex;
+  margin: 0.75rem;
   background-color: aquamarine;
   border: solid 0.1rem blue;
   border-radius: 0.75rem;
-
+  gap: 0.35rem;
 }
-
-
-.input form{
-   display:flex;
+.output-1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  /* background-color: rgb(70, 85, 80); */
+  /* border: solid 0.1rem rgb(22, 22, 56); */
+  border-radius: 0.75rem;
+  gap: 0.5rem;
+}
+.output-2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  /* background-color: rgb(70, 85, 80); */
+  /* border: solid 0.1rem rgb(22, 22, 56); */
+  border-radius: 0.75rem;
+  gap: 0.5rem;
+}
+.input form {
+  display: flex;
   /*  */
-   gap:0.5rem;
-   margin-top: 0.5rem;
-   padding: 0.5rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
 }
 
-.form-inner-div{
+.form-inner-div {
   display: flex;
   gap: 0.5rem;
-  padding:1rem;
+  padding: 1rem;
 }
-button{
-  background-color: #04AA6D; /* Green color */
+button {
+  background-color: #04aa6d; /* Green color */
   color: white; /* White text color */
   border: none; /* Removes default border */
   padding: 0.98rem 2rem; /* Adds padding inside the button */
@@ -99,16 +116,13 @@ button{
   font-size: 1.5rem;
   cursor: pointer; /* Changes cursor to pointer on hover */
   border-radius: 1rem;
-
- 
-
 }
 
 /* Range Slider Input */
 
-.form-inner-div-slider{
+.form-inner-div-slider {
   display: flex;
   flex-direction: column;
 
- margin-top: 0.25rem;
-  }
+  margin-top: 0.25rem;
+}
