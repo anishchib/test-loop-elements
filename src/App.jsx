@@ -7,10 +7,12 @@ import Output from "./Output";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [displayOutput, setDisplayOutput] = useState(true);
+  const [displayOutput, setDisplayOutput] = useState(false);
   const [range, setRange] = useState(10);
   const [selectedOption, setSelectedOption] = useState("option2");
-
+  const [array, setArray] = useState([
+    { maxVal: { range }, SelectedValue: { selectedOption } },
+  ]);
   const handleSetRange = (val) => {
     setRange(val);
   };
@@ -22,16 +24,22 @@ function App() {
     <>
       <div className="container">
         <Input
+          setDisplayOutput={setDisplayOutput}
           selectedOption={selectedOption}
           range={range}
           onHandleSetRange={handleSetRange}
           onHandleSetSelectedOption={handleSetSelectedOption}
         />
-        <Output
-          range={range}
-          selectedOption={selectedOption}
-          displayOutput={displayOutput}
-        />
+        {displayOutput && (
+          <Output
+            setDisplayOutput={setDisplayOutput}
+            setSelectedOption={setSelectedOption}
+            setRange={setRange}
+            range={range}
+            selectedOption={selectedOption}
+            displayOutput={displayOutput}
+          />
+        )}
       </div>
     </>
   );

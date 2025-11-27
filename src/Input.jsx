@@ -1,6 +1,7 @@
 import React from "react";
 
 const Input = ({
+  setDisplayOutput,
   onHandleSetSelectedOption,
   selectedOption,
   range,
@@ -16,6 +17,7 @@ const Input = ({
   };
   const formProcessing = (evt) => {
     evt.preventDefault();
+    setDisplayOutput(true);
   };
 
   return (

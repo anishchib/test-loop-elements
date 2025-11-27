@@ -1,6 +1,18 @@
 import React from "react";
-const Output = ({ range, selectedOption, displayOutput }) => {
+const Output = ({
+  setDisplayOutput,
+  setSelectedOption,
+  setRange,
+  range,
+  selectedOption,
+  displayOutput,
+}) => {
   // compute numeric length safely
+  const handleReset = () => {
+    setDisplayOutput(false);
+    setSelectedOption("option2");
+    setRange(10);
+  };
   const length = Number(range) || 0;
 
   // precompute code string (avoid side-effects during render)
@@ -32,30 +44,32 @@ const Output = ({ range, selectedOption, displayOutput }) => {
         </select>
       </div>
 
-      {displayOutput && (
-        <div className="output-2">
-          <h1>
-            Selected Option:{" "}
-            {selectedOption === "option1"
-              ? "Spread Method"
+      <div className="output-2">
+        <h1>
+          Selected Option:{" "}
+          {selectedOption === "option1"
+            ? "Spread Method"
+            : selectedOption === "option2"
+            ? "From Method"
+            : ""}
+        </h1>
+        <textarea
+          rows="8"
+          id="codeArea"
+          value={
+            selectedOption === "option1"
+              ? optionsFromSpread
               : selectedOption === "option2"
-              ? "From Method"
-              : ""}
-          </h1>
-          <textarea
-            rows="8"
-            id="codeArea"
-            value={
-              selectedOption === "option1"
-                ? optionsFromSpread
-                : selectedOption === "option2"
-                ? optionsFromArrayFrom
-                : ""
-            }
-            readOnly
-          />
-        </div>
-      )}
+              ? optionsFromArrayFrom
+              : ""
+          }
+          readOnly
+        />
+      </div>
+
+      <button type="reset" onClick={handleReset}>
+        Reset
+      </button>
     </div>
   );
 };
