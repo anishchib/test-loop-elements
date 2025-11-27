@@ -5,7 +5,6 @@ const Output = ({
   setRange,
   range,
   selectedOption,
-  displayOutput,
 }) => {
   // compute numeric length safely
   const handleReset = () => {
